@@ -2,12 +2,16 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { AiyoResponse, ExtractedSnapshot } from "../types.js";
 
 let ai: GoogleGenAI | null = null;
+
 function getGenAI() {
   if (!ai) {
-    if (!process.env.GEMINI_API_KEY) {
-      throw new Error("GEMINI_API_KEY is missing.");
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+    if (!apiKey) {
+      throw new Error("VITE_GEMINI_API_KEY is missing.");
     }
-    ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+
+    ai = new GoogleGenAI({ apiKey });
   }
   return ai;
 }

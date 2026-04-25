@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, type FormEvent, type ChangeEvent } from "react";
 import { Loader2, ImagePlus, X, Send, Calculator, Wallet, LayoutDashboard } from "lucide-react";
 import { analyzeTradeOff, fileToBase64 } from "./services/ai";
 import { AiyoResponse } from "./types";
@@ -6,7 +6,11 @@ import { ResultDisplay } from "./components/ResultDisplay";
 import { FinancialSnapshotPage } from "./components/FinancialSnapshotPage";
 import { DashboardPage } from "./components/DashboardPage";
 
+
+
+
 export default function App() {
+  console.log("VITE_GEMINI_API_KEY loaded:", !!import.meta.env.VITE_GEMINI_API_KEY);
   const [currentView, setCurrentView] = useState<"decision" | "snapshot" | "dashboard">("decision");
   const [text, setText] = useState("");
   const [file, setFile] = useState<File | null>(null);
@@ -16,7 +20,7 @@ export default function App() {
   
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       setFile(e.target.files[0]);
     }
@@ -34,7 +38,7 @@ export default function App() {
     setCurrentView("decision");
   };
 
-  const handleAnalyze = async (e: React.FormEvent) => {
+  const handleAnalyze = async (e: FormEvent) => {
     e.preventDefault();
     if (!text.trim() && !file) return;
 
@@ -228,3 +232,5 @@ export default function App() {
     </div>
   );
 }
+
+
