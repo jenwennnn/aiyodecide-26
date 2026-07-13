@@ -4,11 +4,7 @@
 
 AiyoDecide is a proactive, AI-powered financial decision-support engine built for Malaysian young adults, students, and gig workers. Instead of merely tracking expenses *after* they happen, AiyoDecide acts as an empathetic financial guardian, evaluating daily dilemmas against strict personal constraints to protect cash flow and optimize wealth.
 
-## 🚀 Live Demo
-[https://aiyosafe-26-i1v6gulqj-jenwennns-projects.vercel.app/]
 
-## 💌 Pitch Video & Pitch Deck
-[https://canva.link/uird14hwyei3omm]
 
 ## ✨ Core Features
 * **Progressive Financial Snapshot:** Users establish a baseline profile (Income, Rent, Debt) and set unbreakable personal constraints (e.g., "Must maintain an RM500 emergency buffer").
