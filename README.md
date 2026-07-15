@@ -1,10 +1,11 @@
-# 🛡️ AiyoDecide (AiyoSafe)
+# 🛡️ AiyoDecide 
 
 > **UMHackathon 2026 Submission** | Domain: AI for Economic Empowerment & Decision Intelligence
 
 AiyoDecide is a proactive, AI-powered financial decision-support engine built for Malaysian young adults, students, and gig workers. Instead of merely tracking expenses *after* they happen, AiyoDecide acts as an empathetic financial guardian, evaluating daily dilemmas against strict personal constraints to protect cash flow and optimize wealth.
 
-
+## 🚀 Live Demo
+[https://aiyosafe-26-i1v6gulqj-jenwennns-projects.vercel.app/]
 
 ## ✨ Core Features
 * **Progressive Financial Snapshot:** Users establish a baseline profile (Income, Rent, Debt) and set unbreakable personal constraints (e.g., "Must maintain an RM500 emergency buffer").
@@ -31,7 +32,8 @@ cd umhackathon-aiyosafe
 npm install
 
 ### 3. Environment Setup
-Create a .env file in the root directory and add your Google Gemini API key. (Note: Vite requires the VITE_ prefix).
+Create a .env file in the root directory and add your Google Gemini API key.
+(Note: Vite requires the VITE_ prefix).
 
 VITE_GEMINI_API_KEY=your_gemini_api_key_here
 
